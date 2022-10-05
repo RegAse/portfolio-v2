@@ -8,7 +8,7 @@ function App() {
           <div className="row">
             <div className="col-sm-12">
               <div className="profile-box">
-                <img src="/images/svg-1.svg" className="lines-animation" alt="Failed loading..." />                
+                <img src="./images/svg-1.svg" className="lines-animation" alt="Failed loading..." />                
                 <img className="img-fluid profile-image" src="./images/me-2.png" alt="Failed loading..." />
                 <h2 className="py-4">Guðmundur Axel Guðrúnarson</h2>
               </div>
