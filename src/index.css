@@ -1,4 +1,5 @@
 body {
+  color: white;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +11,149 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.wrap {
+  width: 100%;
+  min-height: 350px;
+  background-color: #13151E;
+  background-image: url("../public/images/background.png");
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.wrap-2 {
+  width: 100%;
+  padding-top: 30px;
+  min-height: 1000px;
+  background-color: #101826;
+}
+
+.profile-container {
+  min-height: 350px;
+}
+
+.profile-box {
+  text-align: center;
+  margin-top: 50px;
+  /* z-index: ; */
+}
+
+.profile-image {
+  height: 250px;
+  position: relative;
+  
+  /* border-radius: 50%; */
+  /* box-shadow: 2px 2px #00b7ff; */
+}
+
+.showcase-container {
+  min-height: 500px;
+}
+
+.showcase-image {
+  border: 2px solid #1d2637;
+  max-height: 200px;
+}
+
+.divider-1 {
+  min-height: 2px;
+  background-color: #313E6C;
+}
+
+.text-grey {
+  color: #b7b7b7;
+}
+
+/* Animations */
+.lines-animation {
+  /* filter: invert(8%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%); */
+  /* fill: red; */
+  max-height: 290px;
+  /* background-color: blue; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  /* min-width: 1200px; */
+  left: 0;
+  right: 0;
+  text-align: center; 
+  top: 0%;
+  position: absolute;
+  /* stroke-dasharray: 1000;
+  stroke-dashoffset: 1000; */
+  /* animation: animation1 5s linear forwards; */
+  animation-name: profile-image-animation;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  /* animation-timing-function: linear; */
+  transition: transform .7s ease-in-out;
+}
+.lines-animation:hover {
+  transform: rotate(120deg);
+}
+
+.background-glow {
+  left: 0;
+  right: 0;
+  text-align: center; 
+  top: 0%;  left: 0;
+  right: 0;
+  text-align: center; 
+  top: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 400px;
+  position: absolute;
+  text-align: center;
+  filter: invert(8%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%);
+  animation-name: animation1;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  /* animation-timing-function:; */
+  /* z-index: 0; */
+}
+/* rect {
+  filter: invert(8%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%) !important;
+  fill: red !important;
+} */
+
+@keyframes animation1 {
+  0% {
+    /* background-color: orange; */
+    filter: invert(33%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%);
+  }
+
+  50% {
+    /* background-color: red; */
+    filter: invert(66%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(129%) contrast(100%);
+  }
+
+  100% {
+    /* background-color: darkcyan; */
+    stroke-dashoffset: 0;
+    filter: invert(33%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%);
+  }
+}
+
+@keyframes profile-image-animation {
+  0% {
+    /* background-color: orange; */
+    filter: invert(33%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%);
+    transform: rotate(120deg);
+  }
+
+  50% {
+    /* background-color: red; */
+    filter: invert(66%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(80%) contrast(100%);
+    transform: rotate(240deg);
+  }
+
+  100% {
+    /* background-color: darkcyan; */
+    /* stroke-dashoffset: 0; */
+    transform: rotate(120deg);
+    filter: invert(33%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%);
+  }
 }
