@@ -9,7 +9,7 @@ function App() {
             <div className="col-sm-12">
               <div className="profile-box">
                 <img src="/images/svg-1.svg" className="lines-animation" alt="Failed loading..." />                
-                <img className="img-fluid profile-image" src="./images/me-2.png" />
+                <img className="img-fluid profile-image" src="./images/me-2.png" alt="Failed loading..." />
                 <h2 className="py-4">Guðmundur Axel Guðrúnarson</h2>
               </div>
             </div>
@@ -28,7 +28,7 @@ function App() {
             </div>
             <div className="col-sm-6 text-center showcase-container">
               <h3>Task App</h3>
-              <img className="img-fluid showcase-image" src="./images/task-app.png" />
+              <img className="img-fluid showcase-image" src="./images/task-app.png" alt="Failed loading..." />
               <p className="text-grey">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -36,7 +36,7 @@ function App() {
             </div>
             <div className="col-sm-6 text-center showcase-container">
               <h3>Todo App</h3>
-              <img className="img-fluid showcase-image" src="./images/countdown-app.png" />
+              <img className="img-fluid showcase-image" src="./images/countdown-app.png" alt="Failed loading..." />
               <p className="text-grey">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -44,7 +44,7 @@ function App() {
             </div>
             <div className="col-sm-6 text-center showcase-container">
               <h3>Task App</h3>
-              <img className="img-fluid showcase-image" src="./images/task-app.png" />
+              <img className="img-fluid showcase-image" src="./images/task-app.png" alt="Failed loading..." />
               <p className="text-grey">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -52,7 +52,7 @@ function App() {
             </div>
             <div className="col-sm-6 text-center showcase-container">
               <h3>Todo App</h3>
-              <img className="img-fluid showcase-image" src="./images/countdown-app.png" />
+              <img className="img-fluid showcase-image" src="./images/countdown-app.png" alt="Failed loading..." />
               <p className="text-grey">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -60,7 +60,7 @@ function App() {
             </div>
             <div className="col-sm-6 text-center showcase-container">
               <h3>Task App</h3>
-              <img className="img-fluid showcase-image" src="./images/task-app.png" />
+              <img className="img-fluid showcase-image" src="./images/task-app.png" alt="Failed loading..." />
               <p className="text-grey">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -69,7 +69,7 @@ function App() {
             </div>
             <div className="col-sm-6 text-center showcase-container">
               <h3>Todo App</h3>
-              <img className="img-fluid showcase-image" src="./images/countdown-app.png" />
+              <img className="img-fluid showcase-image" src="./images/countdown-app.png" alt="Failed loading..." />
               <p className="text-grey">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -83,7 +83,7 @@ function App() {
             </div>
             <div className="col-sm-6 text-center showcase-container">
               <h3>Task App</h3>
-              <img className="img-fluid showcase-image" src="./images/task-app.png" />
+              <img className="img-fluid showcase-image" src="./images/task-app.png" alt="Failed loading..." />
               <p className="text-grey">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -91,7 +91,7 @@ function App() {
             </div>
             <div className="col-sm-6 text-center showcase-container">
               <h3>Todo App</h3>
-              <img className="img-fluid showcase-image" src="./images/countdown-app.png" />
+              <img className="img-fluid showcase-image" src="./images/countdown-app.png" alt="Failed loading..." />
               <p className="text-grey">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
