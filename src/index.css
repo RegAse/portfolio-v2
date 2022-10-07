@@ -15,7 +15,8 @@ code {
 
 .wrap {
   width: 100%;
-  min-height: 350px;
+  min-height: 400px;
+  height: 400px;
   background-color: #13151E;
   background-image: url("../public/images/background.png");
   background-repeat: repeat;
@@ -59,8 +60,10 @@ code {
 
 .divider-1 {
   min-height: 2px;
+  overflow: hidden;
   background-color: #313E6C;
 }
+
 
 .text-grey {
   color: #b7b7b7;
@@ -90,15 +93,15 @@ code {
   /* animation-timing-function: linear; */
   transition: transform .7s ease-in-out;
 }
-.lines-animation:hover {
+/* .profile-image:hover{
   transform: rotate(120deg);
-}
+} */
 
 .background-glow {
   left: 0;
   right: 0;
   text-align: center; 
-  top: 0%;  left: 0;
+  top: 0%;
   right: 0;
   text-align: center; 
   top: 0%;
@@ -155,5 +158,76 @@ code {
     /* stroke-dashoffset: 0; */
     transform: rotate(120deg);
     filter: invert(33%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%);
+  }
+}
+
+.left-to-right-1 {
+  background-color: red;
+  width: 10%;
+  /* min-height: 2px; */
+  animation-name: animation2;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  left: 0%;
+  position: relative;
+}
+
+@keyframes animation2 {
+  0% {
+    left: 0%;
+    /* background-color: orange; */
+    /* filter: invert(33%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%); */
+    background-color: transparent;
+  }
+
+  50% {
+    /* background-color: red; */
+    /* filter: invert(66%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(129%) contrast(100%); */
+    background-color: rgb(164, 162, 255);
+  }
+
+  100% {
+    /* background-color: darkcyan; */
+    left: 100%;
+    /* filter: invert(33%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%); */
+    background-color: transparent;
+  }
+}
+
+.particle-flow-up-1 {
+  background-color: transparent;
+  width: 1px;
+  /* margin-left: 10px; */
+  /* margin-right: 10px; */
+  min-height: 12px;
+  animation-name: animation3;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  top: 100%;
+  position: relative;
+  margin-bottom: -12px;
+}
+
+@keyframes animation3 {
+  0% {
+    top: 100%;
+    /* background-color: orange; */
+    /* filter: invert(33%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%); */
+    background-color: transparent;
+  }
+
+  50% {
+    /* background-color: red; */
+    /* filter: invert(66%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(129%) contrast(100%); */
+    background-color: rgb(164, 162, 255);
+  }
+
+  100% {
+    /* background-color: darkcyan; */
+    top: 0%;
+    /* filter: invert(33%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%); */
+    background-color: transparent;
   }
 }

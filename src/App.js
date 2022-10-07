@@ -3,12 +3,23 @@ function App() {
   return (
     <div>
       <div className="wrap">
+        <div className="particle-flow-up-1" style={{left: "3%", animationDelay: "1s"}}></div>
+        <div className="particle-flow-up-1" style={{left: "10%", animationDelay: "2s"}}></div>
+        <div className="particle-flow-up-1" style={{left: "20%", animationDelay: "3s"}}></div>
+        <div className="particle-flow-up-1" style={{left: "30%", animationDelay: "4s"}}></div>
+        <div className="particle-flow-up-1" style={{left: "40%", animationDelay: "5s"}}></div>
+        <div className="particle-flow-up-1" style={{left: "50%", animationDelay: "4s"}}></div>
+        <div className="particle-flow-up-1" style={{left: "60%", animationDelay: "5.5s"}}></div>
+        <div className="particle-flow-up-1" style={{left: "70%", animationDelay: "1.5s"}}></div>
+        <div className="particle-flow-up-1" style={{left: "80%", animationDelay: "3.5s"}}></div>
+        <div className="particle-flow-up-1" style={{left: "90%", animationDelay: "2.5s"}}></div>
+        <div className="particle-flow-up-1" style={{left: "97%", animationDelay: "2.2s"}}></div>
       {/* <img src="/images/svg-5.svg" className="background-glow" alt="Failed loading..." /> */}
         <div className="container profile-container">
           <div className="row">
             <div className="col-sm-12">
               <div className="profile-box">
-                <img src="./images/svg-1.svg" className="lines-animation" alt="Failed loading..." />                
+                <img src="./images/svg-1.svg" className="lines-animation" alt="Failed loading..." />
                 <img className="img-fluid profile-image" src="./images/me-2.png" alt="Failed loading..." />
                 <h2 className="py-4">Guðmundur Axel Guðrúnarson</h2>
               </div>
@@ -17,7 +28,8 @@ function App() {
         </div>
       </div>
       <div className="divider-1">
-
+        {/* <div className="left-to-right-1">
+        </div> */}
       </div>
       <div className="wrap-2">
         <div className="container">
