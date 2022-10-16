@@ -1,11 +1,16 @@
 body {
   color: white;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
+    font-family: 'Open Sans', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-color: #151313; */
+  /* background-color: #1C1C1C; */
+  background-color: #0F0F0F;
+  overflow-x: hidden;
 }
 
 code {
@@ -13,221 +18,153 @@ code {
     monospace;
 }
 
-.wrap {
-  width: 100%;
-  min-height: 400px;
-  height: 400px;
-  background-color: #13151E;
-  background-image: url("../public/images/background.png");
-  background-repeat: repeat;
-  background-size: contain;
-  background-position: center;
+.container {
+  background-color: #0F0F0F;
+  /* box-shadow: -3px -3px 12px rgb(51, 47, 47); */
+  /* margin-top: 100px; */
 }
 
-.wrap-2 {
-  width: 100%;
-  padding-top: 30px;
-  min-height: 1000px;
-  background-color: #101826;
+@media (min-width: 992px) {
+  .container {
+    margin-top: 5em;
+  }
 }
 
-.profile-container {
-  min-height: 350px;
+/*  */
+.box-lighter-1 {
+  background-color: #1D1D1D;
 }
 
-.profile-box {
-  text-align: center;
-  margin-top: 50px;
-  /* z-index: ; */
+.skill-box-1 {
+  padding: 1em;
+  margin-top: 2em;
+  box-shadow: 2px 2px 8px #202020;
 }
 
-.profile-image {
-  height: 250px;
+.projects-row {
+  margin-top: 2em;
+  padding: 2em;
+}
+
+.project-box-1 {
+  margin-top: 5em;
+  box-shadow: 2px 2px 8px #202020;
+}
+
+.project-box-info-1 {
+  padding: 1.2em;
   position: relative;
-  
-  /* border-radius: 50%; */
-  /* box-shadow: 2px 2px #00b7ff; */
+  min-height: 15em;
 }
 
-.showcase-container {
-  min-height: 500px;
+.project-box-info-text-1 {
+  /* min-height: 100px; */
 }
 
-.showcase-image {
-  border: 2px solid #1d2637;
-  max-height: 200px;
-}
-
-.divider-1 {
-  min-height: 2px;
-  overflow: hidden;
-  background-color: #313E6C;
-}
-
-
-.text-grey {
-  color: #b7b7b7;
-}
-
-/* Animations */
-.lines-animation {
-  /* filter: invert(8%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%); */
-  /* fill: red; */
-  max-height: 290px;
-  /* background-color: blue; */
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-  /* min-width: 1200px; */
-  left: 0;
-  right: 0;
-  text-align: center; 
-  top: 0%;
+.project-box-info-text-bottom-1 {
   position: absolute;
-  /* stroke-dasharray: 1000;
-  stroke-dashoffset: 1000; */
-  /* animation: animation1 5s linear forwards; */
-  animation-name: profile-image-animation;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  /* animation-timing-function: linear; */
-  transition: transform .7s ease-in-out;
+  bottom: 0;
 }
-/* .profile-image:hover{
-  transform: rotate(120deg);
-} */
+.tiny-text{
+  font-size: 0.8em;
+  color: grey;
+}
+.profile-text{
+  font-size: 1.1em;
+}
+.profile-row{
+  /* box-shadow: 2px 2px 22px black; */
+  background-color: #131313;
+  /* border-bottom: 0.2em solid #9d7322; */
+}
+.profile-extra-info{
+  color: grey;
+  min-height: 2.5em;
+}
+.profile-extra-info span{
+  margin-left: 0.7em;
+}
+span svg{
+  /* vertical-align: auto; */
+}
 
-.background-glow {
-  left: 0;
-  right: 0;
-  text-align: center; 
-  top: 0%;
-  right: 0;
-  text-align: center; 
-  top: 0%;
-  margin-left: auto;
-  margin-right: auto;
-  max-height: 400px;
+.footer{
+  min-height: 400px; 
+  margin-top: 12em;
+}
+.pad-0{
+  padding: 0;
+}
+.pad-1{
+  padding: 1em;
+}
+.pad-2{
+  padding: 2em;
+}
+
+.video-over-image-1 {
   position: absolute;
-  text-align: center;
-  filter: invert(8%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%);
-  animation-name: animation1;
-  animation-duration: 12s;
-  animation-iteration-count: infinite;
-  /* animation-timing-function:; */
-  /* z-index: 0; */
-}
-/* rect {
-  filter: invert(8%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%) !important;
-  fill: red !important;
-} */
-
-@keyframes animation1 {
-  0% {
-    /* background-color: orange; */
-    filter: invert(33%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%);
-  }
-
-  50% {
-    /* background-color: red; */
-    filter: invert(66%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(129%) contrast(100%);
-  }
-
-  100% {
-    /* background-color: darkcyan; */
-    stroke-dashoffset: 0;
-    filter: invert(33%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%);
-  }
 }
 
-@keyframes profile-image-animation {
-  0% {
-    /* background-color: orange; */
-    filter: invert(33%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%);
-    transform: rotate(120deg);
-  }
-
-  50% {
-    /* background-color: red; */
-    filter: invert(66%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(80%) contrast(100%);
-    transform: rotate(240deg);
-  }
-
-  100% {
-    /* background-color: darkcyan; */
-    /* stroke-dashoffset: 0; */
-    transform: rotate(120deg);
-    filter: invert(33%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%);
-  }
+.box-to-slide-in-1{
+  opacity: 0;
+  /* left: 300px; */
+  /* position: relative; */
+}
+.box-to-slide-in-1-left{
+  opacity: 0;
+  /* left: 300px; */
+  /* position: relative; */
 }
 
-.left-to-right-1 {
+/* CSS3 Slide in */
+.slide-in-1{
+  transform: translateY(250px);
+  transform: translateX(250px);
+  animation: slide-in-1 1.5s ease forwards;
+}
+.slide-in-1-left{
+  transform: translateY(250px);
+  transform: translateX(-250px);
+  animation: slide-in-1 1.5s ease forwards;
+}
+
+@keyframes slide-in-1{
+  to { transform: translateY(0); opacity: 1; transform: translateX(0); }
+}
+
+/* Fixed left sidebar hiearchy */
+.sidebar-left{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
   background-color: red;
-  width: 10%;
-  /* min-height: 2px; */
-  animation-name: animation2;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  left: 0%;
-  position: relative;
+  max-width: 100px;
 }
 
-@keyframes animation2 {
-  0% {
-    left: 0%;
-    /* background-color: orange; */
-    /* filter: invert(33%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%); */
-    background-color: transparent;
-  }
+/* Courses */
+.courses-row {
+  /* box-shadow: 2px 2px 22px black; */
+  /* box-shadow: 2px 2px 8px #202020; */
+  /* box-shadow: 2px 2px 22px black; */
+  background-color: #131313;
 
-  50% {
-    /* background-color: red; */
-    /* filter: invert(66%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(129%) contrast(100%); */
-    background-color: rgb(164, 162, 255);
-  }
+  margin-top: 2em;
+  padding: 0.75em;
 
-  100% {
-    /* background-color: darkcyan; */
-    left: 100%;
-    /* filter: invert(33%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%); */
-    background-color: transparent;
-  }
 }
-
-.particle-flow-up-1 {
-  background-color: transparent;
-  width: 1px;
-  /* margin-left: 10px; */
-  /* margin-right: 10px; */
-  min-height: 12px;
-  animation-name: animation3;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  top: 100%;
-  position: relative;
-  margin-bottom: -12px;
+.course-box{
+  font-size: 0.9em;
 }
-
-@keyframes animation3 {
-  0% {
-    top: 100%;
-    /* background-color: orange; */
-    /* filter: invert(33%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%); */
-    background-color: transparent;
-  }
-
-  50% {
-    /* background-color: red; */
-    /* filter: invert(66%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(129%) contrast(100%); */
-    background-color: rgb(164, 162, 255);
-  }
-
-  100% {
-    /* background-color: darkcyan; */
-    top: 0%;
-    /* filter: invert(33%) sepia(87%) saturate(395%) hue-rotate(191deg) brightness(22%) contrast(100%); */
-    background-color: transparent;
-  }
+.courses-list{
+  list-style: none;
+}
+.courses-list li{
+  margin-top: 1em;
+  /* display: inline-block; */
+}
+.course-provider{
+  background-color: rgb(47, 81, 125);
+  padding: 0.4em;
 }
