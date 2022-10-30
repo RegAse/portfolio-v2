@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import { BsGeoAltFill, BsPersonFill, BsFillAwardFill, BsLinkedin } from 'react-icons/bs';
+import SvgPhoto1 from './components/SvgPhoto1'
 
 $.fn.isInViewport = function () {
   var elementTop = $(this).offset().top;
@@ -47,7 +48,12 @@ function App() {
         </div>
       </nav>
       {/* Bootstrap scroll spy */}
-      <div className="container" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" tabindex="0">
+      {/* <div className='wrapper-1'>
+        <div className='container'>
+
+        </div>
+      </div> */}
+      <div className="container" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" tabIndex="0">
         <div className='overview-dynamic box-to-slide-in-1 slide-in-1-delay d-none d-sm-block'>
           {/* <ul className='follow-view-y'>
             <li>Um mig</li>
@@ -63,38 +69,38 @@ function App() {
           </div>
         </div>
         <div id="aboutme" className="row profile-row">
-          {/* <div className='col-md-1'>
+            {/* <div className='col-md-1'>
           </div> */}
-          <div className="col-sm-7 col-md-6 col-lg-6 offset-sm-1 offset-md-1 offset-lg-1 profile-info">
-            <h1 className='profile-heading-name box-to-slide-in-1 slide-in-1'>Guðmundur Axel Guðrúnarson</h1>
-            <h4 className='text-grey box-to-slide-in-1 slide-in-1'>Forritari</h4>
-            <div className="profile-about box-to-slide-in-1 slide-in-1-delay">
-              Hi! I have a lot of interest in designing websites and software architecture,
-              I am fast at adapting to new frameworks and am very open minded towards new things.
-              I have knowledge from everything from the back-end to the front-end such as secure
-              user authentication, api's, database setup, front-end design. I graduated from
-              Computer Path (Tölvubraut), Tækniskólinn in 2016 with Award for Best Success in
-              Computer Classes.
+            <div className="col-sm-12 col-md-5 col-lg-5 order-md-2">
+              {/* <img className="img-fluid" src="./images/bobo-5-03.jpeg" alt="Failed loading..." /> */}
+              <img className="img-fluid profile-image" src="./images/me31-1.png" alt="Failed loading..." />
+              {/* <SvgPhoto1></SvgPhoto1> */}
+
+              {/* <img className="img-fluid" src="./images/bobo-5-1.png" alt="Failed loading..." /> */}
+            </div>
+            <div className="col-sm-12 col-md-6 col-lg-6 offset-sm-1 offset-md-1 offset-lg-1 profile-info">
+              <h1 className='profile-heading-name box-to-slide-in-1 slide-in-1'>Guðmundur Axel Guðrúnarson</h1>
+              <h4 className='text-grey box-to-slide-in-1 slide-in-1'>Forritari</h4>
+              <div className="profile-about box-to-slide-in-1 slide-in-1-delay">
+                Hi! I have a lot of interest in designing websites and software architecture,
+                I am fast at adapting to new frameworks and am very open minded towards new things.
+                I have knowledge from everything from the back-end to the front-end such as secure
+                user authentication, api's, database setup, front-end design. I graduated from
+                Computer Path (Tölvubraut), Tækniskólinn in 2016 with Award for Best Success in
+                Computer Classes.
+              </div>
             </div>
           </div>
-          <div className="col-sm-3 col-md-4 col-lg-4">
-
-            {/* <img className="img-fluid" src="./images/bobo-5-03.jpeg" alt="Failed loading..." /> */}
-            <img className="img-fluid" src="./images/me3.jpeg" alt="Failed loading..." />
-
-            {/* <img className="img-fluid" src="./images/bobo-5-1.png" alt="Failed loading..." /> */}
-          </div>
-        </div>
         <div className='row work-row' id="education">
           <h1 className='text-center box-to-slide-in-1'>Education</h1>
-          <div className='row work-items-container'>
+          <div className='work-items-container'>
             <div className='row work-item-row'>
               <div className='col-md-5 d-flex justify-content-center align-items-center'>
                 <div className='text-date box-to-slide-in-1'>
                   <h3>2013 - 2016</h3>
                 </div>
               </div>
-              <div className='col-md-7 work-item box-to-slide-in-1'>
+              <div className='col-12 col-md-7 work-item box-to-slide-in-1'>
                 <h3>Tölvubraut, Tækniskólinn <span className='text-grey'>(Computer Science Dept)</span></h3>
                 <p>
                   Grade: Most computer related courses: 10/10<br></br><br></br>
@@ -134,7 +140,7 @@ function App() {
 
         <div className='row work-row' id="projects">
           <h1 className='text-center box-to-slide-in-1'>Projects</h1>
-          <div className='row work-items-container'>
+          <div className='work-items-container'>
             <div className='row work-item-row'>
               <div className='col-md-11 offset-md-1 project-item box-to-slide-in-1'>
                 <div className='row'>
@@ -283,6 +289,16 @@ function App() {
               <div className='col-md-6'>
                 <div className='skill-item'>
                   Affinity Designer
+                </div>
+              </div>
+              <div className='col-md-6'>
+                <div className='skill-item'>
+                  Affinity Photo
+                </div>
+              </div>
+              <div className='col-md-6'>
+                <div className='skill-item'>
+                  Unity
                 </div>
               </div>
             </div>
