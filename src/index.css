@@ -8,8 +8,8 @@ body {
   background-color: #0F0F0F;
   overflow-x: hidden;
   /* background-image: url("../public/images/gradient-2.png"); */
-  background: url("../public/images/background-3.jpeg");
-  /* background-size: 100em; */
+  background: black url("../public/images/background-3-1.jpeg");
+  background-size: 250em;
   /* background-repeat: repeat-x; */
   /* background-position: top center; */
 
@@ -17,8 +17,8 @@ body {
   /* background-image: url("../public/images/background-black.png"); */
   /* background-size: cover; */
   /* background-position: right bottom; */
-  background-size: cover;
-  background-position: -280em -0em;
+  /* background-size: cover; */
+  background-position: -120em -0em;
   /*background-position: 22em -13em;
   background-repeat: repeat-x; */
 }

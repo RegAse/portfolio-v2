@@ -259,6 +259,71 @@ function App() {
         <div className='row skills-row' id="skills">
           <h1 className='text-center box-to-slide-in-1'>Skills</h1>
           <div className='col-md-5 offset-md-4 skill-list'>
+            <h4>Knowledge</h4>
+            <div className='row box-to-slide-in-1'>
+              <div className='col-md-6'>
+                <div className='skill-item'>
+                  C#
+                </div>
+              </div>
+              <div className='col-md-6'>
+                <div className='skill-item'>
+                  Javscript
+                </div>
+              </div>
+              <div className='col-md-6'>
+                <div className='skill-item'>
+                  C++
+                </div>
+              </div>
+              <div className='col-md-6'>
+                <div className='skill-item'>
+                  Java
+                </div>
+              </div>
+              <div className='col-md-6'>
+                <div className='skill-item'>
+                  Python 2/3
+                </div>
+              </div>
+              <div className='col-md-6'>
+                <div className='skill-item'>
+                  PHP
+                </div>
+              </div>
+              <div className='col-md-6'>
+                <div className='skill-item'>
+                  Laravel
+                </div>
+              </div>
+              <div className='col-md-6'>
+                <div className='skill-item'>
+                  ASP.NET
+                </div>
+              </div>
+              <div className='col-md-6'>
+                <div className='skill-item'>
+                  MYSQL
+                </div>
+              </div>
+              <div className='col-md-6'>
+                <div className='skill-item'>
+                  SQLite
+                </div>
+              </div>
+              <div className='col-md-6'>
+                <div className='skill-item'>
+                  React
+                </div>
+              </div>
+              <div className='col-md-6'>
+                <div className='skill-item'>
+                  Shaders
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='col-md-5 offset-md-4 skill-list'>
             <h4>Programs</h4>
             <div className='row box-to-slide-in-1'>
               <div className='col-md-6'>
