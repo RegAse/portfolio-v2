@@ -4,23 +4,11 @@ body {
   font-family: 'Open Sans', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #080a0d; */
   background-color: #0F0F0F;
   overflow-x: hidden;
-  /* background-image: url("../public/images/gradient-2.png"); */
   background: black url("../public/images/background-3-1.jpeg");
   background-size: 250em;
-  /* background-repeat: repeat-x; */
-  /* background-position: top center; */
-
-  /* Bobo Code */
-  /* background-image: url("../public/images/background-black.png"); */
-  /* background-size: cover; */
-  /* background-position: right bottom; */
-  /* background-size: cover; */
   background-position: -120em -0em;
-  /*background-position: 22em -13em;
-  background-repeat: repeat-x; */
 }
 
 code {
@@ -29,24 +17,15 @@ code {
 }
 
 .container {
-  /* background-color: #0F0F0F; */
-  /* margin-top: 4em; */
-}
 
-@media (min-width: 992px) {
-  /* .container {
-    margin-top: 5em;
-  } */
 }
-
 
 /* Profile */
 .profile-row {
-  margin-top: 5em;
+  margin-top: 1em;
 }
 
 .profile-about {
-  /* background-color: rgb(26, 26, 26); */
   background-color: rgba(26, 26, 26, 0.25);
   padding: 1.3em;
   font-size: 1.1em;
@@ -68,42 +47,77 @@ code {
 
 /* Work row */
 .work-row {
-  margin-top: 10em;
+  margin-top: 4em;
 }
 
 .work-item {
-  /* background-color: rgb(20, 20, 20); */
-  /* background-color: rgba(38, 38, 38, 0.43); */
   background-color: rgba(24, 24, 24, 0.43);
   box-shadow: 2px 2px 12px #131313;
   padding: 1.5em;
 }
 
-.project-item {
-  background-color: rgba(24, 24, 24, 0.43);
+.project-item-1 {
+  background-color: rgba(0, 0, 0, 0.43);
   box-shadow: 2px 2px 12px #131313;
-  /* background-color: rgba(38, 38, 38, 0.43); */
-  /* background-color: rgb(20, 20, 20); */
-  /* box-shadow: 0px 0px 20px #262626; */
-  /* min-height: 15em; */
-  transition: box-shadow 0.5s;
-  transition: scale 0.5s;
+}
+
+.project-item {
+  position: relative;
+  /* background-color: rgba(24, 24, 24, 0.43);
+  box-shadow: 2px 2px 12px #131313; */
+  /* transition: box-shadow 0.5s; */
+  /* transition: scale 0.5s; */
+  transition: background-size 0.5s;
+  background-size: 110%;
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  min-height: 25em;
+}
+
+.project-item:hover .project-item-info {
+  opacity: 1;
+  left: -1.5em;
+}
+
+.project-item:hover .project-item-info-bottom {
+  opacity: 1;
 }
 
 .project-item:hover {
   box-shadow: 0px 0px 20px #8a8a8a54;
-  scale: 1.05;
+  /* scale: 1.05; */
+  background-size: 105%;
 }
 
 .project-item-info {
-  padding: 1.5em;
-  padding-bottom: 5em;
+  position: absolute;
+  left: -1em;
+  top: -2.5em;
+  /* padding: 1.5em; */
+  /* opacity: 0; */
+  transition: all 0.5s;
+  /* transition: opacity 0.5s; */
+
+  /* padding-bottom: 5em; */
+}
+
+.project-item-info-header{
+  background-color: #1b1b1bd8;
+  padding: 0.75em;
+  box-shadow: 0px 0px 10px #000000cc;
 }
 
 .project-item-info-bottom {
   position: absolute;
   font-size: 0.85em;
   bottom: 0;
+  text-shadow: 0px 0px 6px #000000;
+  width: 100%;
+  background-color: #2b2b2b79;
+  text-align: center;
+  padding: 1em;
+  opacity: 0;
+  transition: all 0.5s;
 }
 
 .work-item-row {
@@ -121,18 +135,21 @@ code {
 }
 
 .skill-item {
-  /* background-color: rgb(68, 38, 36); */
   background-color: rgba(40, 40, 40, 0.45);
   padding: 0.4em;
   margin-top: 1em;
   text-align: center;
   font-size: 1em;
+  box-shadow: 0px 0px 3px #484848;
+}
+.skill-item:hover {
+  background-color: rgba(255, 255, 255, 0.507);
+  /* cursor: pointer; */
 }
 
 /* Footer */
 .footer {
   min-height: 20em;
-  /* background-color: rgb(20, 20, 20); */
   background-color: rgba(19, 15, 15, 0.62);
   padding: 2em;
   padding-bottom: 0;
@@ -176,13 +193,15 @@ code {
 .text-grey {
   color: grey;
 }
+.text-tiny-grey {
+  color: #b5b5b5;
+}
 
 .text-date {
   color: rgb(228, 228, 228);
 }
 
 .navbar-main-1 {
-  /* background-color: #6a6a6a1c !important; */
   background-color: #09090942 !important;
   height: 4.5em;
   left: 0;
@@ -272,10 +291,6 @@ code {
 
 /* customize bootstrap list group classes */
 
-.list-group-1 {
-  /* background-color: transparent; */
-}
-
 .list-group-1 a {
   background-color: transparent;
   color: grey;
@@ -300,11 +315,6 @@ code {
 
 /* Courses */
 .courses-row {
-  /* box-shadow: 2px 2px 22px black; */
-  /* box-shadow: 2px 2px 8px #202020; */
-  /* box-shadow: 2px 2px 22px black; */
-  /* background-color: #131313; */
-
   margin-top: 2em;
   padding: 0.75em;
 
@@ -320,7 +330,6 @@ code {
 
 .courses-list li {
   margin-top: 1em;
-  /* display: inline-block; */
 }
 
 .course-provider {
@@ -341,6 +350,7 @@ code {
 .btn-primary-1 {
   background-color: rgb(146, 96, 96);
   border-radius: 2%;
+  font-size: 1em;
   color: white;
 }
 
@@ -361,7 +371,6 @@ code {
   transform-origin: 50% 50%;
   transform: translate(45%, 0%);
   scale: 0;
-  /* transform: rotate(220deg); */
   animation: example1;
   animation-duration: 3s;
   animation-timing-function: linear;
@@ -372,7 +381,6 @@ code {
   opacity: 0;
   transform-origin: 50% 50%;
   transform: translate(12%, 0%);
-  /* transform: rotate(144deg); */
   scale: 0;
 
   animation: example1;
@@ -400,9 +408,6 @@ code {
     scale: 1;
     transform: rotate(0deg);
     transform: translate(0%, 0%);
-
-
-    /* transform-origin: 50% 50%; */
   }
 }
 
@@ -410,7 +415,6 @@ code {
   opacity: 0.1;
   animation: fadein;
   animation-duration: 3s;
-  /* animation-timing-function: linear; */
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
@@ -423,12 +427,25 @@ code {
 
 /* wrapper 1 */
 .wrapper-1 {
-  /* height: 100vh; */
   padding-bottom: 4em;
   padding-top: 4em;
   width: 100%;
-  /* background-color: red; */
-  /* background-color: rgba(255, 0, 0, 0.342); */
-  /* background-image: url("../public/images/background.jpeg"); */
+}
 
+.skill-more-info {
+  background-color: rgba(20, 20, 20, 0.8);
+  color: white;
+  border-radius: 1%;
+  box-shadow: 0px 0px 10px rgba(59, 59, 59, 0.308);
+  min-width: 30em;
+}
+
+.skill-more-info-body {
+  color: white;
+}
+
+.skill-more-info-header {
+  color: white;
+  border-radius: 1%;
+  background-color: rgba(70, 70, 70, 0.164);
 }

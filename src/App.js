@@ -1,6 +1,19 @@
 import $ from 'jquery';
 import { BsGeoAltFill, BsPersonFill, BsFillAwardFill, BsLinkedin } from 'react-icons/bs';
 import SvgPhoto1 from './components/SvgPhoto1'
+import Popover from 'react-bootstrap/Popover';
+import Button from 'react-bootstrap/Button';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+
+var data = {
+  skills: [
+    { name: "C#", content: "My Experience with C#" },
+    { name: "Javscript", content: "Javascript experience..." },
+    { name: "React", content: "REACT JS" },
+    { name: "C++", content: "C++" },
+    { name: "PHP", content: "PHP" },
+  ]
+}
 
 $.fn.isInViewport = function () {
   var elementTop = $(this).offset().top;
@@ -12,6 +25,7 @@ $.fn.isInViewport = function () {
   return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
+// Slide in fade effect
 $(window).on('scroll', function () {
   $('.box-to-slide-in-1').each(function (i, e) {
     let el = $(e);
@@ -28,21 +42,32 @@ $(window).on('scroll', function () {
   });
 });
 
+// const popover = (
+//   <Popover className='skill-more-info' id="popover-basic">
+//     <Popover.Header as="h3" className='skill-more-info-header'>C#</Popover.Header>
+//     <Popover.Body className='skill-more-info-body'>
+//       I have been using C# since 2013 when i started using it in school, and
+//       have been using it since. 
+//       I have used C# to build WPF, ASP.NET, CMD, and Unity applications.
+//     </Popover.Body>
+//   </Popover>
+// );
+
 function App() {
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-1 navbar-fixed-top navbar-main-1">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Guðmundur Axel Guðrúnarson
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-1 navbar-fixed-top navbar-main-1">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">Guðmundur Axel Guðrúnarson
             {/* <img className='box-to-slide-in-1 slide-in-1' height="24" src="./images/web-design-5-fancy-text.png" alt="Failed loading..." /> */}
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNav" aria-controls="navbarNav"
             aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ms-auto">
             </ul>
           </div>
         </div>
@@ -61,37 +86,37 @@ function App() {
             <li>Nám</li>
             <li>Færni</li>
           </ul> */}
-          <div id="list-example" class="list-group list-group-1 follow-view-y ">
-            <a class="list-group-item list-group-item-action" href="#aboutme">About Me</a>
-            <a class="list-group-item list-group-item-action" href="#education">Education</a>
-            <a class="list-group-item list-group-item-action" href="#projects">Projects</a>
-            <a class="list-group-item list-group-item-action" href="#skills">Skills</a>
+          <div id="list-example" className="list-group list-group-1 follow-view-y ">
+            <a className="list-group-item list-group-item-action" href="#aboutme">About Me</a>
+            {/* <a className="list-group-item list-group-item-action" href="#education">Education</a> */}
+            <a className="list-group-item list-group-item-action" href="#projects">Projects</a>
+            <a className="list-group-item list-group-item-action" href="#skills">Skills</a>
           </div>
         </div>
         <div id="aboutme" className="row profile-row">
-            {/* <div className='col-md-1'>
+          {/* <div className='col-md-1'>
           </div> */}
-            <div className="col-sm-12 col-md-5 col-lg-5 order-md-2">
-              {/* <img className="img-fluid" src="./images/bobo-5-03.jpeg" alt="Failed loading..." /> */}
-              <img className="img-fluid profile-image" src="./images/me31-1.png" alt="Failed loading..." />
-              {/* <SvgPhoto1></SvgPhoto1> */}
+          <div className="col-sm-12 col-md-5 col-lg-5 order-md-2">
+            {/* <img className="img-fluid" src="./images/bobo-5-03.jpeg" alt="Failed loading..." /> */}
+            <img className="img-fluid profile-image" src="./images/me31-1.png" alt="Failed loading..." />
+            {/* <SvgPhoto1></SvgPhoto1> */}
 
-              {/* <img className="img-fluid" src="./images/bobo-5-1.png" alt="Failed loading..." /> */}
-            </div>
-            <div className="col-sm-12 col-md-6 col-lg-6 offset-sm-1 offset-md-1 offset-lg-1 profile-info">
-              <h1 className='profile-heading-name box-to-slide-in-1 slide-in-1'>Guðmundur Axel Guðrúnarson</h1>
-              <h4 className='text-grey box-to-slide-in-1 slide-in-1'>Forritari</h4>
-              <div className="profile-about box-to-slide-in-1 slide-in-1-delay">
-                Hi! I have a lot of interest in designing websites and software architecture,
-                I am fast at adapting to new frameworks and am very open minded towards new things.
-                I have knowledge from everything from the back-end to the front-end such as secure
-                user authentication, api's, database setup, front-end design. I graduated from
-                Computer Path (Tölvubraut), Tækniskólinn in 2016 with Award for Best Success in
-                Computer Classes.
-              </div>
+            {/* <img className="img-fluid" src="./images/bobo-5-1.png" alt="Failed loading..." /> */}
+          </div>
+          <div className="col-sm-12 col-md-6 col-lg-6 offset-sm-1 offset-md-1 offset-lg-1 profile-info">
+            <h1 className='profile-heading-name box-to-slide-in-1 slide-in-1'>Guðmundur Axel Guðrúnarson</h1>
+            <h4 className='text-grey box-to-slide-in-1 slide-in-1'>Forritari</h4>
+            <div className="profile-about box-to-slide-in-1 slide-in-1-delay">
+              Hi! I have a lot of interest in designing websites and software architecture,
+              I am fast at adapting to new frameworks and am very open minded towards new things.
+              I have knowledge from everything from the back-end to the front-end such as secure
+              user authentication, api's, database setup, front-end design. I graduated from
+              Computer Path (Tölvubraut), Tækniskólinn in 2016 with Award for Best Success in
+              Computer Classes.
             </div>
           </div>
-        <div className='row work-row' id="education">
+        </div>
+        {/* <div className='row work-row' id="education">
           <h1 className='text-center box-to-slide-in-1'>Education</h1>
           <div className='work-items-container'>
             <div className='row work-item-row'>
@@ -109,8 +134,8 @@ function App() {
               </div>
             </div>
           </div>
-        </div>
-        <div className='row courses-row box-to-slide-in-1'>
+        </div> */}
+        {/* <div className='row courses-row box-to-slide-in-1'>
           <h5>Online Courses</h5>
           <div className='col-md-4 course-box'>
             <ul className='courses-list'>
@@ -136,32 +161,87 @@ function App() {
               <li><span className='course-provider'> Pluralsight</span> Game Design Fundamentals </li>
             </ul>
           </div>
-        </div>
+        </div> */}
 
-        <div className='row work-row' id="projects">
-          <h1 className='text-center box-to-slide-in-1'>Projects</h1>
-          <div className='work-items-container'>
-            <div className='row work-item-row'>
-              <div className='col-md-11 offset-md-1 project-item box-to-slide-in-1'>
-                <div className='row'>
-                  <div className='col-md-5 d-flex justify-content-center align-items-center pad-0'>
-                    <div className='text-date'>
-                      <img className="img-fluid" src="./images/web-designer-site-2.png" alt="Failed loading..." />
-                    </div>
-                  </div>
-                  <div className='col-md-6 project-item-info'>
-                    <h3>Web Designer Landing Page</h3>
-                    <p>Designed example homepage of a made up web developer company.</p>
-
-                    <p className="project-item-info-bottom">
+        <div className='work-row' id="projects">
+          <h1 className='text-center box-to-slide-in-1 slide-in-1'>Projects</h1>
+          <div className='row work-items-container'>
+            <div className='col-sm-12 col-md-12 col-lg-5 offset-md-1 mt-5'>
+              <div className='project-item box-to-slide-in-1 slide-in-1' style={{ backgroundImage: "url(./images/web-designer-site-6.gif)" }}>
+                <div className='project-item-info'>
+                  <div className='project-item-info-header'>
+                    <h4>Graphic Designer Landing Page</h4>
+                    <p className='text-tiny-grey'>Designed a landing page for a made up graphic design company</p>
+                    {/* <p className="project-item-info-header">
                       Made with React.js, Bootstrap<br></br>
-                      Designed with Affinity Designer <span className="tiny-text">(Adobe Illustrator alternative)</span>
-                    </p>
+                      Designed with Affinity Designer
+                    </p>  */}
+                  </div>
+
+                  {/* <p className="project-item-info-bottom">
+                      Made with React.js, Bootstrap<br></br>
+                      Designed with Affinity Designer
+                    </p> */}
+                </div>
+                <div className='project-item-info-bottom'>
+                  <a className='fancy-link' href='https://regase.github.io/designer-landing-page/' rel="noreferrer" target="_blank">
+                    <button className='btn btn-primary-1'>Check it out here</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className='col-sm-12 col-md-12 col-lg-5 mt-5'>
+              <div className='project-item box-to-slide-in-1 slide-in-1' style={{ backgroundImage: "url(./images/web-designer-site-10.png)" }}>
+                <div className='row'>
+                  <div className='project-item-info'>
+                    <div className='project-item-info-header'>
+                      <h4>Portfolio site</h4>
+                      <p className='text-tiny-grey'>A portfolio site made with React.js, Bootstrap</p>
+                    </div>
+
+                    {/* <p className="project-item-info-bottom">
+                      Made with React.js, Bootstrap<br></br>
+                      Designed with Affinity Designer
+                    </p> */}
                   </div>
                 </div>
               </div>
             </div>
-            <div className='row work-item-row'>
+            <div className='col-sm-12 col-md-12 col-lg-5 offset-md-1 mt-5'>
+              <div className='project-item box-to-slide-in-1 slide-in-1' style={{ backgroundImage: "url(./images/web-designer-site-3.png)" }}>
+                <div className='row'>
+                  <div className='project-item-info'>
+                    <div className='project-item-info-header'>
+                      <h4>Video Game Landing Page</h4>
+                      <p className='text-tiny-grey'>Designed a home page for a small video game I made.</p>
+                    </div>
+
+                    {/* <p className="project-item-info-bottom">
+                      Made with React.js, Bootstrap<br></br>
+                      Designed with Affinity Designer
+                    </p> */}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='col-sm-12 col-md-12 col-lg-5 mt-5'>
+              <div className='project-item box-to-slide-in-1 slide-in-1' style={{ backgroundImage: "url(./images/web-designer-site-9.gif)" }}>
+                <div className='row'>
+                  <div className='project-item-info'>
+                    <div className='project-item-info-header'>
+                      <h4>SVG Design App</h4>
+                      <p className='text-tiny-grey'>A small project where you can modify svg graphic by choosing colors and background colors.</p>
+                    </div>
+
+                    {/* <p className="project-item-info-bottom">
+                      Made with React.js, Bootstrap<br></br>
+                      Designed with Affinity Designer
+                    </p> */}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* <div className='row work-item-row'>
               <div className='col-md-11 offset-md-1 project-item box-to-slide-in-1'>
                 <div className='row'>
                   <div className='col-md-5 d-flex justify-content-center align-items-center pad-0'>
@@ -218,9 +298,6 @@ function App() {
                   <div className='col-md-6 project-item-info'>
                     <h3>Video Game Landing Page</h3>
                     <p>Designed a home page for a small video game I made.</p>
-                    {/* <a className='fancy-link' href='https://regase.github.io/svg-design-app/' rel="noreferrer" target="_blank">
-                      <button className='btn btn-primary-1'>Check it out here</button>
-                    </a> */}
 
                     <p className="project-item-info-bottom">
                       Made with React.js, Bootstrap<br></br>
@@ -241,9 +318,6 @@ function App() {
                   <div className='col-md-6 project-item-info'>
                     <h3>A Gallery Page</h3>
                     <p>Designed a little website to showcase some photos</p>
-                    {/* <a className='fancy-link' href='https://regase.github.io/svg-design-app/' rel="noreferrer" target="_blank">
-                      <button className='btn btn-primary-1'>Check it out here</button>
-                    </a> */}
 
                     <p className="project-item-info-bottom">
                       Made with React.js, Bootstrap<br></br>
@@ -252,8 +326,7 @@ function App() {
                   </div>
                 </div>
               </div>
-            </div>
-            {/* toooo */}
+            </div> */}
           </div>
         </div>
         <div className='row skills-row' id="skills">
@@ -261,64 +334,80 @@ function App() {
           <div className='col-md-5 offset-md-4 skill-list'>
             <h4>Knowledge</h4>
             <div className='row box-to-slide-in-1'>
-              <div className='col-md-6'>
+              <div className='col-md-3'>
                 <div className='skill-item'>
                   C#
+                  {/* <OverlayTrigger trigger="hover" placement="bottom" overlay={popover}>
+                    <div>C#</div>
+                  </OverlayTrigger> */}
                 </div>
               </div>
-              <div className='col-md-6'>
+              <div className='col-md-3'>
                 <div className='skill-item'>
-                  Javscript
+                  Javascript
+                  {/* <OverlayTrigger trigger="hover" placement="bottom" overlay={popover}>
+                    <div>Javscript</div>
+                  </OverlayTrigger> */}
                 </div>
               </div>
-              <div className='col-md-6'>
+              <div className='col-md-3'>
                 <div className='skill-item'>
                   C++
                 </div>
               </div>
-              <div className='col-md-6'>
+              <div className='col-md-3'>
                 <div className='skill-item'>
                   Java
                 </div>
               </div>
-              <div className='col-md-6'>
+              <div className='col-md-3'>
                 <div className='skill-item'>
                   Python 2/3
                 </div>
               </div>
-              <div className='col-md-6'>
+              <div className='col-md-3'>
                 <div className='skill-item'>
                   PHP
                 </div>
               </div>
-              <div className='col-md-6'>
+              <div className='col-md-3'>
                 <div className='skill-item'>
                   Laravel
                 </div>
               </div>
-              <div className='col-md-6'>
+              <div className='col-md-3'>
                 <div className='skill-item'>
                   ASP.NET
                 </div>
               </div>
-              <div className='col-md-6'>
+              <div className='col-md-3'>
                 <div className='skill-item'>
                   MYSQL
                 </div>
               </div>
-              <div className='col-md-6'>
+              <div className='col-md-3'>
                 <div className='skill-item'>
                   SQLite
                 </div>
               </div>
-              <div className='col-md-6'>
+              <div className='col-md-3'>
                 <div className='skill-item'>
                   React
                 </div>
               </div>
-              <div className='col-md-6'>
+              <div className='col-md-3'>
                 <div className='skill-item'>
                   Shaders
+                </div>
+              </div>
+              <div className='col-md-3'>
+                <div className='skill-item'>
+                  MongoDB
+                </div>
+              </div>
+              <div className='col-md-3'>
+                <div className='skill-item'>
+                  GraphQL
                 </div>
               </div>
             </div>
@@ -326,42 +415,42 @@ function App() {
           <div className='col-md-5 offset-md-4 skill-list'>
             <h4>Programs</h4>
             <div className='row box-to-slide-in-1'>
-              <div className='col-md-6'>
+              <div className='col-md-4'>
                 <div className='skill-item'>
                   Visual Studio Code
                 </div>
               </div>
-              <div className='col-md-6'>
+              <div className='col-md-4'>
                 <div className='skill-item'>
                   Visual Studio
                 </div>
               </div>
-              <div className='col-md-6'>
+              <div className='col-md-4'>
                 <div className='skill-item'>
                   IntelliJ IDEA
                 </div>
               </div>
-              <div className='col-md-6'>
+              <div className='col-md-4'>
                 <div className='skill-item'>
                   Eclipse
                 </div>
               </div>
-              <div className='col-md-6'>
+              <div className='col-md-4'>
                 <div className='skill-item'>
                   CMD
                 </div>
               </div>
-              <div className='col-md-6'>
+              <div className='col-md-4'>
                 <div className='skill-item'>
                   Affinity Designer
                 </div>
               </div>
-              <div className='col-md-6'>
+              <div className='col-md-4'>
                 <div className='skill-item'>
                   Affinity Photo
                 </div>
               </div>
-              <div className='col-md-6'>
+              <div className='col-md-4'>
                 <div className='skill-item'>
                   Unity
                 </div>
