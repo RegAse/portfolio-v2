@@ -22,7 +22,7 @@ code {
 
 /* Profile */
 .profile-row {
-  margin-top: 1em;
+  margin-top: 5em;
 }
 
 .profile-about {
@@ -41,7 +41,10 @@ code {
     margin-top: 8em;
   }
   .profile-about {
-    margin-top: 8em;
+    margin-top: 6em;
+  }
+  .profile-row {
+    margin-top: 1em;
   }
 }
 
@@ -51,9 +54,7 @@ code {
 }
 
 .work-item {
-  background-color: rgba(24, 24, 24, 0.43);
-  box-shadow: 2px 2px 12px #131313;
-  padding: 1.5em;
+  margin-top: 4em;
 }
 
 .project-item-1 {
@@ -197,13 +198,22 @@ code {
 .text-tiny-grey {
   color: #b5b5b5;
 }
+.icon-large{
+  font-size: 2.5em;
+  transition: transform 0.2s;
+  z-index: 9;
+}
+.icon-large:hover{
+  transform: rotate(12deg);
+}
 
 .text-date {
   color: rgb(228, 228, 228);
 }
 
 .navbar-main-1 {
-  background-color: #09090942 !important;
+  /* background-color: #09090942 !important; */
+  background-color: #09090900 !important;
   height: 4.5em;
   left: 0;
   top: 0;
@@ -267,7 +277,7 @@ code {
 /* A dynamic overview */
 .overview-dynamic {
   position: fixed;
-  border-left: 0.2em solid rgb(85, 85, 85);
+  border-left: 0.2em solid rgba(225, 225, 225, 0.24);
   height: 13em;
   width: 12em;
   left: 0.7em;
@@ -285,7 +295,7 @@ code {
 /* For larger displays */
 @media (min-width: 992px) {
   .overview-dynamic {
-    left: 3em;
+    left: 2em;
     font-size: 1.2em;
   }
 }
@@ -418,6 +428,8 @@ code {
   animation-duration: 3s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
+  z-index: -1;
+  position: relative;
 }
 
 @keyframes fadein {

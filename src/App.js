@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { BsGeoAltFill, BsPersonFill, BsFillAwardFill, BsLinkedin } from 'react-icons/bs';
+import { BsGeoAltFill, BsPersonFill, BsFillAwardFill, BsLinkedin, BsGithub, BsFillEnvelopeFill } from 'react-icons/bs';
 import SvgPhoto1 from './components/SvgPhoto1'
 import Popover from 'react-bootstrap/Popover';
 import Button from 'react-bootstrap/Button';
@@ -68,6 +68,15 @@ function App() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.linkedin.com/in/gudmundur-axel-gudrunarson"><BsLinkedin className='icon-large'></BsLinkedin></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/RegAse"><BsGithub className='icon-large'></BsGithub></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mailto:gudmundur210@gmail.com"><BsFillEnvelopeFill className='icon-large'></BsFillEnvelopeFill></a>
+              </li>
             </ul>
           </div>
         </div>
@@ -166,7 +175,7 @@ function App() {
         <div className='work-row' id="projects">
           <h1 className='text-center box-to-slide-in-1 slide-in-1'>Projects</h1>
           <div className='row work-items-container'>
-            <div className='col-sm-12 col-md-12 col-lg-5 offset-md-1 mt-5'>
+            <div className='col-sm-12 col-md-12 col-lg-5 offset-md-1 work-item'>
               <div className='project-item box-to-slide-in-1 slide-in-1' style={{ backgroundImage: "url(./images/web-designer-site-6.gif)" }}>
                 <div className='project-item-info'>
                   <div className='project-item-info-header'>
@@ -184,7 +193,7 @@ function App() {
                     </p> */}
                 </div>
                 <div className='project-item-info-bottom'>
-                  <a className='fancy-link' href='https://regase.github.io/designer-landing-page/' rel="noreferrer" target="_blank">
+                  <a className='fancy-link' href='https://regase.github.io/designer-landing-page/'>
                     <button className='btn btn-primary-1'>Check it out here</button>
                   </a>
                   <a className='fancy-link' href='https://regase.github.io/designer-landing-page/' rel="noreferrer" target="_blank">
@@ -193,7 +202,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className='col-sm-12 col-md-12 col-lg-5 mt-5'>
+            <div className='col-sm-12 col-md-12 col-lg-5 work-item'>
               <div className='project-item box-to-slide-in-1 slide-in-1' style={{ backgroundImage: "url(./images/web-designer-site-10.png)" }}>
                 <div className='row'>
                   <div className='project-item-info'>
@@ -210,7 +219,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className='col-sm-12 col-md-12 col-lg-5 offset-md-1 mt-5'>
+            <div className='col-sm-12 col-md-12 col-lg-5 offset-md-1 work-item'>
               <div className='project-item box-to-slide-in-1 slide-in-1' style={{ backgroundImage: "url(./images/web-designer-site-3.png)" }}>
                 <div className='row'>
                   <div className='project-item-info'>
@@ -227,7 +236,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className='col-sm-12 col-md-12 col-lg-5 mt-5'>
+            <div className='col-sm-12 col-md-12 col-lg-5 work-item'>
               <div className='project-item box-to-slide-in-1 slide-in-1' style={{ backgroundImage: "url(./images/web-designer-site-9.gif)" }}>
                 <div className='row'>
                   <div className='project-item-info'>
