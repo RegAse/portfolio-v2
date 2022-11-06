@@ -41,7 +41,7 @@ code {
     margin-top: 8em;
   }
   .profile-about {
-    margin-top: 10em;
+    margin-top: 8em;
   }
 }
 
@@ -71,7 +71,8 @@ code {
   background-size: 110%;
   /* background-size: cover; */
   background-repeat: no-repeat;
-  min-height: 25em;
+  max-height: 25em;
+  height: 18em;
 }
 
 .project-item:hover .project-item-info {

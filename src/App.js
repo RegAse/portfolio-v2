@@ -187,6 +187,9 @@ function App() {
                   <a className='fancy-link' href='https://regase.github.io/designer-landing-page/' rel="noreferrer" target="_blank">
                     <button className='btn btn-primary-1'>Check it out here</button>
                   </a>
+                  <a className='fancy-link' href='https://regase.github.io/designer-landing-page/' rel="noreferrer" target="_blank">
+                    <button className='btn btn-primary-1'>Code</button>
+                  </a>
                 </div>
               </div>
             </div>
