@@ -114,14 +114,16 @@ function App() {
           </div>
           <div className="col-sm-12 col-md-6 col-lg-6 offset-sm-1 offset-md-1 offset-lg-1 profile-info">
             <h1 className='profile-heading-name box-to-slide-in-1 slide-in-1'>Guðmundur Axel Guðrúnarson</h1>
-            <h4 className='text-grey box-to-slide-in-1 slide-in-1'>Forritari</h4>
+            <h4 className='text-grey box-to-slide-in-1 slide-in-1'>Web Developer, Programmer</h4>
             <div className="profile-about box-to-slide-in-1 slide-in-1-delay">
-              Hi! I have a lot of interest in designing websites and software architecture,
+              Hi! I have a lot of interest in creating websites, programming and making games.
               I am fast at adapting to new frameworks and am very open minded towards new things.
               I have knowledge from everything from the back-end to the front-end such as secure
-              user authentication, api's, database setup, front-end design. I graduated from
-              Computer Path (Tölvubraut), Tækniskólinn in 2016 with Award for Best Success in
-              Computer Classes.
+              user authentication, api's, database setup, front-end design.
+              <br></br>
+              <br></br>
+              Graduated from Computer Path (Tölvubraut), Tækniskólinn in 2016 with Award for
+              Best Success in Computer Classes.
             </div>
           </div>
         </div>
@@ -176,6 +178,31 @@ function App() {
           <h1 className='text-center box-to-slide-in-1 slide-in-1'>Projects</h1>
           <div className='row work-items-container'>
             <div className='col-sm-12 col-md-12 col-lg-5 offset-md-1 work-item'>
+              <div className='project-item box-to-slide-in-1 slide-in-1' style={{ backgroundImage: "url(./images/web-designer-site-11.png)" }}>
+                <div className='row'>
+                  <div className='project-item-info'>
+                    <div className='project-item-info-header'>
+                      <h4>CodeQuiz</h4>
+                      <p className='text-tiny-grey'>A quiz site for programming related question</p>
+                    </div>
+
+                    {/* <p className="project-item-info-bottom">
+                      Made with React.js, Bootstrap<br></br>
+                      Designed with Affinity Designer
+                    </p> */}
+                  </div>
+                  <div className='project-item-info-bottom'>
+                    <a className='fancy-link' href='https://regase.github.io/codequiz/'>
+                      <button className='btn btn-primary-1'>Check it out here</button>
+                    </a>
+                    <a className='fancy-link' href='https://regase.github.io/codequiz/' rel="noreferrer" target="_blank">
+                      <button className='btn btn-primary-1'>Code</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='col-sm-12 col-md-12 col-lg-5 work-item'>
               <div className='project-item box-to-slide-in-1 slide-in-1' style={{ backgroundImage: "url(./images/web-designer-site-6.gif)" }}>
                 <div className='project-item-info'>
                   <div className='project-item-info-header'>
@@ -202,7 +229,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className='col-sm-12 col-md-12 col-lg-5 work-item'>
+            <div className='col-sm-12 col-md-12 col-lg-5 offset-md-1 work-item'>
               <div className='project-item box-to-slide-in-1 slide-in-1' style={{ backgroundImage: "url(./images/web-designer-site-10.png)" }}>
                 <div className='row'>
                   <div className='project-item-info'>
@@ -219,7 +246,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className='col-sm-12 col-md-12 col-lg-5 offset-md-1 work-item'>
+            <div className='col-sm-12 col-md-12 col-lg-5 work-item'>
               <div className='project-item box-to-slide-in-1 slide-in-1' style={{ backgroundImage: "url(./images/web-designer-site-3.png)" }}>
                 <div className='row'>
                   <div className='project-item-info'>
@@ -236,7 +263,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className='col-sm-12 col-md-12 col-lg-5 work-item'>
+            <div className='col-sm-12 col-md-12 col-lg-5 offset-md-1 work-item'>
               <div className='project-item box-to-slide-in-1 slide-in-1' style={{ backgroundImage: "url(./images/web-designer-site-9.gif)" }}>
                 <div className='row'>
                   <div className='project-item-info'>
