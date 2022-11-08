@@ -3,9 +3,9 @@ export const data = {
         {
             id: 0,
             name: "CodeQuiz",
-            description: "A quiz site for programming related questions",
+            description: "A quiz site for programming related questions, with a little special effect showcasing employee names",
             labels: [{name: "React"}, {name: "Bootstrap"}, {name: "Javascript"}, {name: "CSS"}, {name: "HTML"}],
-            media: "url(./images/web-designer-site-11.png)",
+            media: "url(./images/web-designer-site-12.gif)",
             liveLink: "https://regase.github.io/codequiz/",
             githubLink: "https://github.com/RegAse/codequiz"
         },
@@ -29,13 +29,22 @@ export const data = {
         },
         {
             id: 3,
-            name: "Video Game Landing Page",
-            description: "A landing page for a small video game I made",
+            name: "SVG Sandbox",
+            description: "A small project, where you can customize premade svg graphics",
             labels: [{name: "React"}, {name: "Bootstrap"}, {name: "Javascript"}, {name: "CSS"}, {name: "HTML"}],
-            media: "url(./images/web-designer-site-3.png)",
-            liveLink: "https://regase.github.io/codequiz/",
-            githubLink: "https://github.com/RegAse/"
-        }
+            media: "url(./images/web-designer-site-9.gif)",
+            liveLink: "https://regase.github.io/svg-design-app/",
+            githubLink: "https://github.com/RegAse/svg-design-app"
+        },
+        // {
+        //     id: 3,
+        //     name: "Video Game Landing Page",
+        //     description: "A landing page for a small video game I made",
+        //     labels: [{name: "React"}, {name: "Bootstrap"}, {name: "Javascript"}, {name: "CSS"}, {name: "HTML"}],
+        //     media: "url(./images/web-designer-site-3.png)",
+        //     liveLink: "",
+        //     githubLink: ""
+        // }
     ]
 }
 

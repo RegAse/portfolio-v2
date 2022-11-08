@@ -111,8 +111,8 @@ function App() {
               <br></br>
               <br></br>
               <div className='profile-achievements'>
-                <div><BsAwardFill></BsAwardFill> Tækniskólinn - Award for Best Success in Computer Classes - 2016</div>
-                <div className='mt-2'><BsAwardFill></BsAwardFill> Forritunarkeppni - 2nd place in Morpheus division - 2014</div>
+                <div><BsAwardFill className='award'></BsAwardFill> Tækniskólinn - Award for Best Success in Computer Classes - 2016</div>
+                <div className='mt-2'><BsAwardFill className='award'></BsAwardFill> Forritunarkeppni - 2nd place in Morpheus division - 2014</div>
               </div>
             </div>
           </div>
@@ -139,7 +139,6 @@ function App() {
         <div className='work-row' id="projects">
           <h1 className='text-center box-to-slide-in-1 slide-in-1'>Projects</h1>
           <div className='row work-items-container'>
-            {/* Render my projects */}
             {
               projects.map(project => (
                 <div className='col-sm-12 col-md-12 col-lg-6 work-item box-to-slide-in-1 slide-in-1'>
@@ -149,23 +148,9 @@ function App() {
                         <h4>{project.name}</h4>
                         <p className='text-tiny-grey'>{project.description}</p>
                       </div>
-
-                      {/* <p className="project-item-info-bottom">
-                      Made with React.js, Bootstrap<br></br>
-                      Designed with Affinity Designer
-                    </p> */}
                     </div>
                     <div className='project-item' style={{ backgroundImage: project.media }}>
-                      <div className='row'>
-                        {/* <div className='project-item-info-bottom'>
-                          <a className='fancy-link' href='https://regase.github.io/codequiz/'>
-                            <button className='btn btn-primary-1'>Check it out here</button>
-                          </a>
-                          <a className='fancy-link' href='https://regase.github.io/codequiz/' rel="noreferrer" target="_blank">
-                            <button className='btn btn-primary-1'>Code</button>
-                          </a>
-                        </div> */}
-                      </div>
+
                     </div>
                     <p className='mt-4'>
                       {

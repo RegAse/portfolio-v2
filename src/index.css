@@ -109,6 +109,7 @@ code {
   /* opacity: 0; */
   transition: all 0.5s;
   /* transition: opacity 0.5s; */
+  min-height: 8em;
 
   /* padding-bottom: 5em; */
 }
@@ -221,17 +222,8 @@ code {
   transform: rotate(12deg);
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
-/* Grab Attention animation */
-@keyframes attention {
-  0% {
-    color: rgb(255, 255, 255);
-  }
-  49% {
-    color: rgb(134, 134, 134);
-  }
-  100% {
-    color: rgb(255, 255, 255);
-  }
+.award{
+  color: #ffab3c;
 }
 
 .text-date {
