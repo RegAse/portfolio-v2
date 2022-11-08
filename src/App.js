@@ -1,19 +1,10 @@
 import $ from 'jquery';
-import { BsGeoAltFill, BsPersonFill, BsFillAwardFill, BsLinkedin, BsGithub, BsFillEnvelopeFill } from 'react-icons/bs';
+import { BsGeoAltFill, BsPersonFill, BsFillAwardFill, BsLinkedin, BsGithub, BsFillEnvelopeFill, BsAwardFill } from 'react-icons/bs';
 import SvgPhoto1 from './components/SvgPhoto1'
 import Popover from 'react-bootstrap/Popover';
 import Button from 'react-bootstrap/Button';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-
-var data = {
-  skills: [
-    { name: "C#", content: "My Experience with C#" },
-    { name: "Javscript", content: "Javascript experience..." },
-    { name: "React", content: "REACT JS" },
-    { name: "C++", content: "C++" },
-    { name: "PHP", content: "PHP" },
-  ]
-}
+import { data } from './data/projectsData'
 
 $.fn.isInViewport = function () {
   var elementTop = $(this).offset().top;
@@ -42,18 +33,9 @@ $(window).on('scroll', function () {
   });
 });
 
-// const popover = (
-//   <Popover className='skill-more-info' id="popover-basic">
-//     <Popover.Header as="h3" className='skill-more-info-header'>C#</Popover.Header>
-//     <Popover.Body className='skill-more-info-body'>
-//       I have been using C# since 2013 when i started using it in school, and
-//       have been using it since. 
-//       I have used C# to build WPF, ASP.NET, CMD, and Unity applications.
-//     </Popover.Body>
-//   </Popover>
-// );
-
 function App() {
+  let projects = data["projects"];
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-1 navbar-fixed-top navbar-main-1">
@@ -68,14 +50,20 @@ function App() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.linkedin.com/in/gudmundur-axel-gudrunarson"><BsLinkedin className='icon-large'></BsLinkedin></a>
+              <li className="nav-item">
+                <a className="nav-link" href="https://www.linkedin.com/in/gudmundur-axel-gudrunarson" rel="noreferrer" target="_blank">
+                  <BsLinkedin className='icon-large'></BsLinkedin>
+                </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://github.com/RegAse"><BsGithub className='icon-large'></BsGithub></a>
+              <li className="nav-item">
+                <a className="nav-link" href="https://github.com/RegAse" rel="noreferrer" target="_blank">
+                  <BsGithub className='icon-large'></BsGithub>
+                </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="mailto:gudmundur210@gmail.com"><BsFillEnvelopeFill className='icon-large'></BsFillEnvelopeFill></a>
+              <li className="nav-item">
+                <a className="nav-link" href="mailto:gudmundur210@gmail.com" rel="noreferrer" target="_blank">
+                  <BsFillEnvelopeFill className='icon-large'></BsFillEnvelopeFill>
+                </a>
               </li>
             </ul>
           </div>
@@ -118,12 +106,14 @@ function App() {
             <div className="profile-about box-to-slide-in-1 slide-in-1-delay">
               Hi! I have a lot of interest in creating websites, programming and making games.
               I am fast at adapting to new frameworks and am very open minded towards new things.
-              I have knowledge from everything from the back-end to the front-end such as secure
-              user authentication, api's, database setup, front-end design.
+              I have knowledge from everything from the back-end to the front-end such as,
+              api's, database setup, front-end design.
               <br></br>
               <br></br>
-              Graduated from Computer Path (Tölvubraut), Tækniskólinn in 2016 with Award for
-              Best Success in Computer Classes.
+              <div className='profile-achievements'>
+                <div><BsAwardFill></BsAwardFill> Tækniskólinn - Award for Best Success in Computer Classes - 2016</div>
+                <div className='mt-2'><BsAwardFill></BsAwardFill> Forritunarkeppni - 2nd place in Morpheus division - 2014</div>
+              </div>
             </div>
           </div>
         </div>
@@ -146,226 +136,54 @@ function App() {
             </div>
           </div>
         </div> */}
-        {/* <div className='row courses-row box-to-slide-in-1'>
-          <h5>Online Courses</h5>
-          <div className='col-md-4 course-box'>
-            <ul className='courses-list'>
-              <li><span className='course-provider'> LinkedIn</span> React: Software Architecture </li>
-              <li><span className='course-provider'> LinkedIn</span> Learning Path: Become a React Developer </li>
-              <li><span className='course-provider'> LinkedIn</span> React Hooks </li>
-              <li><span className='course-provider'> LinkedIn</span> Node.js for C# Developers </li>
-            </ul>
-          </div>
-          <div className='col-md-4 course-box'>
-            <ul className='courses-list'>
-              <li><span className='course-provider'> LinkedIn</span> Building Modern Projects with React </li>
-              <li><span className='course-provider'> LinkedIn</span> React.js: Building an Interface </li>
-              <li><span className='course-provider'> LinkedIn</span> React: Authentication </li>
-              <li><span className='course-provider'> LinkedIn</span> React: Design Patterns </li>
-            </ul>
-          </div>
-          <div className='col-md-4 course-box'>
-            <ul className='courses-list'>
-              <li><span className='course-provider'> LinkedIn</span> AWS and React: Creating Full-Stack Apps </li>
-              <li><span className='course-provider'> Coursera</span> Agile with Atlassian Jira </li>
-              <li><span className='course-provider'> Coursera</span> Python Data Structures </li>
-              <li><span className='course-provider'> Pluralsight</span> Game Design Fundamentals </li>
-            </ul>
-          </div>
-        </div> */}
-
         <div className='work-row' id="projects">
           <h1 className='text-center box-to-slide-in-1 slide-in-1'>Projects</h1>
           <div className='row work-items-container'>
-            <div className='col-sm-12 col-md-12 col-lg-5 offset-md-1 work-item'>
-              <div className='project-item box-to-slide-in-1 slide-in-1' style={{ backgroundImage: "url(./images/web-designer-site-11.png)" }}>
-                <div className='row'>
-                  <div className='project-item-info'>
-                    <div className='project-item-info-header'>
-                      <h4>CodeQuiz</h4>
-                      <p className='text-tiny-grey'>A quiz site for programming related question</p>
-                    </div>
+            {/* Render my projects */}
+            {
+              projects.map(project => (
+                <div className='col-sm-12 col-md-12 col-lg-6 work-item box-to-slide-in-1 slide-in-1'>
+                  <div className='work-item-content'>
+                    <div className='project-item-info'>
+                      <div className='project-item-info-header'>
+                        <h4>{project.name}</h4>
+                        <p className='text-tiny-grey'>{project.description}</p>
+                      </div>
 
-                    {/* <p className="project-item-info-bottom">
+                      {/* <p className="project-item-info-bottom">
                       Made with React.js, Bootstrap<br></br>
                       Designed with Affinity Designer
                     </p> */}
-                  </div>
-                  <div className='project-item-info-bottom'>
-                    <a className='fancy-link' href='https://regase.github.io/codequiz/'>
-                      <button className='btn btn-primary-1'>Check it out here</button>
-                    </a>
-                    <a className='fancy-link' href='https://regase.github.io/codequiz/' rel="noreferrer" target="_blank">
-                      <button className='btn btn-primary-1'>Code</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='col-sm-12 col-md-12 col-lg-5 work-item'>
-              <div className='project-item box-to-slide-in-1 slide-in-1' style={{ backgroundImage: "url(./images/web-designer-site-6.gif)" }}>
-                <div className='project-item-info'>
-                  <div className='project-item-info-header'>
-                    <h4>Graphic Designer Landing Page</h4>
-                    <p className='text-tiny-grey'>Designed a landing page for a made up graphic design company</p>
-                    {/* <p className="project-item-info-header">
-                      Made with React.js, Bootstrap<br></br>
-                      Designed with Affinity Designer
-                    </p>  */}
-                  </div>
-
-                  {/* <p className="project-item-info-bottom">
-                      Made with React.js, Bootstrap<br></br>
-                      Designed with Affinity Designer
-                    </p> */}
-                </div>
-                <div className='project-item-info-bottom'>
-                  <a className='fancy-link' href='https://regase.github.io/designer-landing-page/'>
-                    <button className='btn btn-primary-1'>Check it out here</button>
-                  </a>
-                  <a className='fancy-link' href='https://regase.github.io/designer-landing-page/' rel="noreferrer" target="_blank">
-                    <button className='btn btn-primary-1'>Code</button>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className='col-sm-12 col-md-12 col-lg-5 offset-md-1 work-item'>
-              <div className='project-item box-to-slide-in-1 slide-in-1' style={{ backgroundImage: "url(./images/web-designer-site-10.png)" }}>
-                <div className='row'>
-                  <div className='project-item-info'>
-                    <div className='project-item-info-header'>
-                      <h4>Portfolio site</h4>
-                      <p className='text-tiny-grey'>A portfolio site made with React.js, Bootstrap</p>
                     </div>
-
-                    {/* <p className="project-item-info-bottom">
-                      Made with React.js, Bootstrap<br></br>
-                      Designed with Affinity Designer
-                    </p> */}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='col-sm-12 col-md-12 col-lg-5 work-item'>
-              <div className='project-item box-to-slide-in-1 slide-in-1' style={{ backgroundImage: "url(./images/web-designer-site-3.png)" }}>
-                <div className='row'>
-                  <div className='project-item-info'>
-                    <div className='project-item-info-header'>
-                      <h4>Video Game Landing Page</h4>
-                      <p className='text-tiny-grey'>Designed a home page for a small video game I made.</p>
+                    <div className='project-item' style={{ backgroundImage: project.media }}>
+                      <div className='row'>
+                        {/* <div className='project-item-info-bottom'>
+                          <a className='fancy-link' href='https://regase.github.io/codequiz/'>
+                            <button className='btn btn-primary-1'>Check it out here</button>
+                          </a>
+                          <a className='fancy-link' href='https://regase.github.io/codequiz/' rel="noreferrer" target="_blank">
+                            <button className='btn btn-primary-1'>Code</button>
+                          </a>
+                        </div> */}
+                      </div>
                     </div>
-
-                    {/* <p className="project-item-info-bottom">
-                      Made with React.js, Bootstrap<br></br>
-                      Designed with Affinity Designer
-                    </p> */}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='col-sm-12 col-md-12 col-lg-5 offset-md-1 work-item'>
-              <div className='project-item box-to-slide-in-1 slide-in-1' style={{ backgroundImage: "url(./images/web-designer-site-9.gif)" }}>
-                <div className='row'>
-                  <div className='project-item-info'>
-                    <div className='project-item-info-header'>
-                      <h4>SVG Design App</h4>
-                      <p className='text-tiny-grey'>A small project where you can modify svg graphic by choosing colors and background colors.</p>
-                    </div>
-
-                    {/* <p className="project-item-info-bottom">
-                      Made with React.js, Bootstrap<br></br>
-                      Designed with Affinity Designer
-                    </p> */}
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* <div className='row work-item-row'>
-              <div className='col-md-11 offset-md-1 project-item box-to-slide-in-1'>
-                <div className='row'>
-                  <div className='col-md-5 d-flex justify-content-center align-items-center pad-0'>
-                    <div className='text-date'>
-                      <img className="img-fluid" src="./images/web-designer-site-6.gif" alt="Failed loading..." />
-                    </div>
-                  </div>
-                  <div className='col-md-6 project-item-info'>
-                    <h3>Graphic Designer Landing Page</h3>
-                    <p>Designed a landing page for a made up graphic design company</p>
-                    <a className='fancy-link' href='https://regase.github.io/designer-landing-page/' rel="noreferrer" target="_blank">
-                      <button className='btn btn-primary-1'>Check it out here</button>
-                    </a>
-
-                    <p className="project-item-info-bottom">
-                      Made with React.js, Bootstrap<br></br>
-                      Designed with Affinity Designer <span className="tiny-text">(Adobe Illustrator alternative)</span>
+                    <p className='mt-4'>
+                      {
+                        project.labels.map(label => (
+                          <span className='skill-item ms-2'>{label.name}</span>
+                        ))
+                      }
                     </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='row work-item-row'>
-              <div className='col-md-11 offset-md-1 project-item box-to-slide-in-1'>
-                <div className='row'>
-                  <div className='col-md-5 d-flex justify-content-center align-items-center pad-0'>
-                    <div className='text-date'>
-                      <img className="img-fluid" src="./images/web-designer-site-9.gif" alt="Failed loading..." />
-                    </div>
-                  </div>
-                  <div className='col-md-6 project-item-info'>
-                    <h3>SVG Design App</h3>
-                    <p>A small project where you can modify svg graphic by choosing colors and background colors.</p>
-                    <a className='fancy-link' href='https://regase.github.io/svg-design-app/' rel="noreferrer" target="_blank">
-                      <button className='btn btn-primary-1'>Check it out here</button>
+                    <a className='fancy-link ms-2' href={project.liveLink} rel="noreferrer" target="_blank">
+                      <button className='btn btn-primary-1'>Live Site</button>
                     </a>
-
-                    <p className="project-item-info-bottom">
-                      Made with React.js, Bootstrap<br></br>
-                      Designed with Affinity Designer <span className="tiny-text">(Adobe Illustrator alternative)</span>
-                    </p>
+                    <a className='fancy-link ms-2' href={project.githubLink} rel="noreferrer" target="_blank">
+                      <button className='btn btn-primary-1'>Source</button>
+                    </a>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className='row work-item-row'>
-              <div className='col-md-11 offset-md-1 project-item box-to-slide-in-1'>
-                <div className='row'>
-                  <div className='col-md-5 d-flex justify-content-center align-items-center pad-0'>
-                    <div className='text-date'>
-                      <img className="img-fluid" src="./images/web-designer-site-3.png" alt="Failed loading..." />
-                    </div>
-                  </div>
-                  <div className='col-md-6 project-item-info'>
-                    <h3>Video Game Landing Page</h3>
-                    <p>Designed a home page for a small video game I made.</p>
-
-                    <p className="project-item-info-bottom">
-                      Made with React.js, Bootstrap<br></br>
-                      Designed with Affinity Designer <span className="tiny-text">(Adobe Illustrator alternative)</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='row work-item-row'>
-              <div className='col-md-11 offset-md-1 project-item box-to-slide-in-1'>
-                <div className='row'>
-                  <div className='col-md-5 d-flex justify-content-center align-items-center pad-0'>
-                    <div className='text-date'>
-                      <img className="img-fluid" src="./images/web-designer-site-8.png" alt="Failed loading..." />
-                    </div>
-                  </div>
-                  <div className='col-md-6 project-item-info'>
-                    <h3>A Gallery Page</h3>
-                    <p>Designed a little website to showcase some photos</p>
-
-                    <p className="project-item-info-bottom">
-                      Made with React.js, Bootstrap<br></br>
-                      Designed with Affinity Designer <span className="tiny-text">(Adobe Illustrator alternative)</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div> */}
+              ))
+            }
           </div>
         </div>
         <div className='row skills-row' id="skills">
@@ -494,6 +312,33 @@ function App() {
                   Unity
                 </div>
               </div>
+            </div>
+          </div>
+          <div className='row courses-row box-to-slide-in-1'>
+            <h5>Online Courses</h5>
+            <div className='col-md-4 course-box'>
+              <ul className='courses-list'>
+                <li><span className='course-provider'> LinkedIn</span> React: Software Architecture </li>
+                <li><span className='course-provider'> LinkedIn</span> Learning Path: Become a React Developer </li>
+                <li><span className='course-provider'> LinkedIn</span> React Hooks </li>
+                <li><span className='course-provider'> LinkedIn</span> Node.js for C# Developers </li>
+              </ul>
+            </div>
+            <div className='col-md-4 course-box'>
+              <ul className='courses-list'>
+                <li><span className='course-provider'> LinkedIn</span> Building Modern Projects with React </li>
+                <li><span className='course-provider'> LinkedIn</span> React.js: Building an Interface </li>
+                <li><span className='course-provider'> LinkedIn</span> React: Authentication </li>
+                <li><span className='course-provider'> LinkedIn</span> React: Design Patterns </li>
+              </ul>
+            </div>
+            <div className='col-md-4 course-box'>
+              <ul className='courses-list'>
+                <li><span className='course-provider'> LinkedIn</span> AWS and React: Creating Full-Stack Apps </li>
+                <li><span className='course-provider'> Coursera</span> Agile with Atlassian Jira </li>
+                <li><span className='course-provider'> Coursera</span> Python Data Structures </li>
+                <li><span className='course-provider'> Pluralsight</span> Game Design Fundamentals </li>
+              </ul>
             </div>
           </div>
         </div>
