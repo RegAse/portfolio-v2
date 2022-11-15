@@ -4,9 +4,9 @@ export const data = {
             id: 0,
             name: "Music Player With Visualizer",
             description: "A music player with a couple of songs to choose from and watch the visualizer",
-            labels: [{name: "React"}, {name: "Bootstrap"}, {name: "Javascript"}, {name: "CSS"}, {name: "HTML"}],
+            labels: [{name: "React"}, {name: "Bootstrap"}, {name: "Javascript"}, {name: "CSS"}, {name: "HTML"}, {name: "HTML Canvas"}],
             media: "url(./images/web-designer-site-13.gif)",
-            liveLink: "https://github.com/RegAse/music-player-visualizer",
+            liveLink: "https://gudmundur-music-player-visualizer.netlify.app/",
             githubLink: "https://github.com/RegAse/music-player-visualizer"
         },
         {
